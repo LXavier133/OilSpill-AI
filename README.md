@@ -33,8 +33,7 @@ cd OilSpill-AI
 
 ### 2. Download the Dataset
 
-> ⚠️ The dataset used for training can be downloaded from [**LINK**].  
-> (Replace `[LINK]` with the actual dataset URL.)
+> ⚠️ The dataset used for training can be downloaded from https://zenodo.org/records/10555314
 
 - After downloading, extract the dataset **into the root directory** of the cloned repository.
 
