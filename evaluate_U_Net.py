@@ -2,7 +2,7 @@ import random
 import os
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-from other_functions import *
+from utils import *
 from PIL import Image
 from tensorflow import keras
 from tensorflow.keras.utils import to_categorical
@@ -13,7 +13,17 @@ NUM_SAMPLES = 10
 dir = os.path.join(os.getcwd(),"dataset","train")
 
 def show_all(img1, img2, img_pil):
-
+	""" 
+	Display the image, expected mask and predicted mask into a plot
+	
+	:param img1: original image
+	:type img1: string
+	:param img2: expected mask image
+	:type img2: string
+	:param img_pil: predicted mask image
+	:type img_pil: PIL Image
+	"""
+	
 	img_read1 = mpimg.imread(img1)
 	plt.subplot(3, 1, 1)
 	plt.imshow(img_read1)
@@ -54,4 +64,4 @@ for i in range(NUM_SAMPLES):
 	with Image.open(os.path.join(dir,"images",img)) as img_pil:
 		width,height = img_pil.size
 	predict_mask = array_to_image(predict_mask_array, width, height)
-	show_all(os.path.join(dir,"images",img),os.path.join(dir,"masks",true_mask),predict_mask)	
+	show_all(os.path.join(dir,"images",img),os.path.join(dir,"masks",true_mask),predict_mask)

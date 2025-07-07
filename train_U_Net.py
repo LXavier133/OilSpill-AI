@@ -6,7 +6,7 @@ from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.callbacks import TensorBoard
 
 from make_U_Net import make_U_Net
-from other_functions import *
+from utils import *
 
 EPOCHS = 30
 BATCH_SIZE = 128

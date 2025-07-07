@@ -1,4 +1,3 @@
-import tensorflow as tf
 from tensorflow.keras.layers import Input, BatchNormalization, Conv2D, Conv2DTranspose
 from tensorflow.keras.layers import MaxPooling2D
 from tensorflow.keras.layers import LeakyReLU
