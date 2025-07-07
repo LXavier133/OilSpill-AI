@@ -12,7 +12,6 @@ def process_single_image(image_path):
 	return img_array
 
 def array_to_image(mask_array, width, height):
-	print(mask_array)
 	mask_map={ 0: (0, 0, 0), 1: (255, 0, 124), 2: (255, 204, 51), 3: (51, 221, 255) }
 	img = np.zeros((128,128,3), dtype=np.uint8)
 	for label, color in mask_map.items():
