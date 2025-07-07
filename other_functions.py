@@ -4,6 +4,25 @@ from PIL import Image
 import numpy as np
 import os
 
+def process_single_image(image_path):
+	img = Image.open(image_path)
+	img_resized = img.resize((128,128), resample=Image.NEAREST)
+	img_array = np.array(img_resized, dtype=np.float32)/255.0
+	img_array = np.expand_dims(img_array, axis=0)
+	return img_array
+
+def array_to_image(mask_array, width, height):
+	print(mask_array)
+	mask_map={ 0: (0, 0, 0), 1: (255, 0, 124), 2: (255, 204, 51), 3: (51, 221, 255) }
+	img = np.zeros((128,128,3), dtype=np.uint8)
+	for label, color in mask_map.items():
+		m = (mask_array == label)
+		img[m] = color
+	img_pil = Image.fromarray(img)
+	img_resized = img_pil.resize((width, height), Image.NEAREST)
+	return img_resized
+
+
 def process_images(image_dir, mask_dir):
 	mask_map={ (0, 0, 0): 0, (255, 0, 124): 1, (255, 204, 51): 2, (51, 221, 255):3 }
 	images = []
@@ -42,5 +61,4 @@ def load_from_json(name):
 	loaded = model_from_json(loaded)
 	loaded.load_weights(name + ".h5")
 	return loaded
-
 
