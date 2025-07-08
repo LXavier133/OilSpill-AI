@@ -62,8 +62,8 @@ python train_U_Net.py
 This will:
 
 - Train a U-Net model on the dataset  
-- Save the model architecture to `model.json`  
-- Save the trained weights to `model_weights.h5`
+- Save the model architecture to `U-Net.json`  
+- Save the trained weights to `U-Net.h5`
 
 ---
 
