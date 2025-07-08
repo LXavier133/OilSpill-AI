@@ -101,7 +101,7 @@ def process_images(image_dir, mask_dir):
 
 def save_to_json(model, name):
 	"""
-	Save model into a JSON file and the weights into a .H5 file
+	Save model into a JSON file and the weights into a .weights.H5 file
 	
 	:param model: model
 	:type model: Keras Model
@@ -112,11 +112,11 @@ def save_to_json(model, name):
 	model_json = model.to_json()
 	with open(name + ".json", 'w') as json_file:
 		json_file.write(model_json)
-	model.save_weights(name + ".h5")
+	model.save_weights(name + ".weights.h5")
 
 def load_from_json(name):
 	"""
-	Load model from JSON file and the weights from a .H5 file
+	Load model from JSON file and the weights from a .weights.H5 file
 	
 	:param name: name of the file
 	:type name: string
@@ -128,6 +128,6 @@ def load_from_json(name):
 	loaded = json_file.read()
 	json_file.close()
 	loaded = model_from_json(loaded)
-	loaded.load_weights(name + ".h5")
+	loaded.load_weights(name + ".weights.h5")
 	return loaded
 
