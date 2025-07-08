@@ -1,19 +1,19 @@
-# 🛢️ OilSpill-AI
+# OilSpill-AI
 
 **OilSpill-AI** is a deep learning project originally developed as the final exam for the *CT-213 – Artificial Intelligence for Mobile Robots* course at the Aeronautics Institute of Technology (ITA), taught by Professor Marcos Máximo.
 
 The goal of this project is to develop an AI model capable of **segmenting ocean surface images** into four categories:
 
-- 🌊 **Normal Water**  
-- 🛢️ **Oil Spills**  
-- 🐟 **Other Objects** (e.g., boats, debris)  
-- 🏖️ **Background**
+- **Normal Water**  
+- **Oil Spills**  
+- **Other Objects** (e.g., boats, debris)  
+- **Background**
 
 The segmentation is performed using a **U-Net** architecture, a popular convolutional neural network model for semantic segmentation tasks.
 
 ---
 
-## 🚀 Features
+## Features
 
 - Image segmentation using U-Net  
 - Dataset exploration and visualization tools  
@@ -22,7 +22,7 @@ The segmentation is performed using a **U-Net** architecture, a popular convolut
 
 ---
 
-## 📂 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -33,13 +33,13 @@ cd OilSpill-AI
 
 ### 2. Download the Dataset
 
-> ⚠️ The dataset used for training can be downloaded from https://zenodo.org/records/10555314
+> The dataset used for training can be downloaded from https://zenodo.org/records/10555314
 
 - After downloading, extract the dataset **into the root directory** of the cloned repository.
 
 ---
 
-## 🔍 Explore the Dataset
+## Explore the Dataset
 
 To visualize and explore the dataset:
 
@@ -51,7 +51,7 @@ This script will display sample input images and their corresponding segmentatio
 
 ---
 
-## 🧠 Train the U-Net Model
+## Train the U-Net Model
 
 To train the model on your local machine:
 
@@ -67,7 +67,7 @@ This will:
 
 ---
 
-## 📈 Evaluate the Model
+## Evaluate the Model
 
 After training, evaluate the model's performance:
 
